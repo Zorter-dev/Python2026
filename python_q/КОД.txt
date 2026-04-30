@@ -1,0 +1,30 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+data = np.loadtxt('company_sales_data.csv', delimiter=',', skiprows=1)
+data = np.transpose(data)
+print(data[0])
+
+'''for i in range(2):
+  plt.plot(data[0], data[i], linewidth='3', linestyle='--', marker='o',  label=f'graph {i}')'''
+
+'''fig, axs = plt.subplots(2)
+axs[0].plot(data[0], data[1], linewidth='3', color='b', linestyle='--', marker='o',  label='graph 1')
+axs[1].plot(data[0], data[2], linewidth='3', color='r', linestyle='--', marker='o',  label='graph 1')
+for ax in axs:
+  ax.xlabel('Номер месяца')
+  ax.ylabel('Количество проданных единиц')'''
+
+'''plt.scatter(data[0], data[1],  label='graph 1')
+plt.grid(True, linestyle='--')
+plt.xlabel('Номер месяца')
+plt.ylabel('Количество проданных единиц')'''
+
+'''plt.bar(data[0], data[1], width=0.4,  label='Face Cream')
+plt.bar(data[0]+0.4, data[2], width=0.4,  label='Face Wash')
+plt.grid(True, linestyle='--')'''
+
+plt.bar(data[0], data[1], width=0.4,  label='Face Cream')
+
+plt.legend()
+plt.show()
